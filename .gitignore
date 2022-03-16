@@ -35,8 +35,3 @@ out/
 
 ### VS Code ###
 .vscode/
-
-/test_assignment.pdf
-/ui/node_modules/
-/node_modules/
-/build/
