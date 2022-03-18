@@ -11,8 +11,10 @@ import java.util.Random;
 /**
  * This class generates a new ship objects.
  *
- * When a free pier appears in the port this generator receive a notification
- * from port (by the update method) and generates a new ship object of the same type.
+ * When a free pier appears in the {@link ru.korshun.port.environment.Port} this
+ * generator receive a notification from port (by the update method) and generates
+ * a new {@link ru.korshun.port.environment.Ship} object of the same
+ * {@link ru.korshun.port.environment.options.Type}.
  */
 @SuppressWarnings("FieldCanBeLocal")
 public class ShipGenerator implements NotificationListener {
