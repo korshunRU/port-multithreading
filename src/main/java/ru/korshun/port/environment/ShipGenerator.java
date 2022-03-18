@@ -12,7 +12,7 @@ import java.util.Random;
  * This class generates a new ship objects.
  *
  * When a free pier appears in the {@link ru.korshun.port.environment.Port} this
- * generator receive a notification from port (by the update method) and generates
+ * generator receive a notification from the port (by the update method) and generates
  * a new {@link ru.korshun.port.environment.Ship} object of the same
  * {@link ru.korshun.port.environment.options.Type}.
  */
