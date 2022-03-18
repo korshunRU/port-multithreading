@@ -10,6 +10,15 @@ import java.util.Optional;
 import java.util.concurrent.ExecutorService;
 import java.util.stream.Collectors;
 
+/**
+ * This class simulates work of port.
+ *
+ * After leaving the {@link ru.korshun.port.environment.Tunnel} each ship
+ * arrives at the port. The port gets ship-type and sends the ship to the
+ * same type of {@link ru.korshun.port.environment.Pier}.
+ * After the ship is unloaded at the pier, port notifies about this the
+ * {@link ru.korshun.port.environment.ShipGenerator}.
+ */
 @SuppressWarnings("FieldCanBeLocal")
 public class Port {
 

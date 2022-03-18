@@ -16,4 +16,5 @@ public class Ship {
   private final Type type;
   private final Speed speed;
   private final Capacity capacity;
+
 }

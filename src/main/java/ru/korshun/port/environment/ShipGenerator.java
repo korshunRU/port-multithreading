@@ -3,12 +3,17 @@ package ru.korshun.port.environment;
 import ru.korshun.port.environment.options.Capacity;
 import ru.korshun.port.environment.options.Speed;
 import ru.korshun.port.environment.options.Type;
-import ru.korshun.port.handler.exception.PierNotFoundException;
 import ru.korshun.port.handler.notification.NotificationListener;
 import ru.korshun.port.handler.notification.NotificationManager;
 
 import java.util.Random;
 
+/**
+ * This class generates a new ship objects.
+ *
+ * When a free pier appears in the port this generator receive a notification
+ * from port (by the update method) and generates a new ship object of the same type.
+ */
 @SuppressWarnings("FieldCanBeLocal")
 public class ShipGenerator implements NotificationListener {
 
@@ -31,13 +36,8 @@ public class ShipGenerator implements NotificationListener {
 
   @Override
   public void start() {
-    for (int x = 0; x < type.getCount(); x++) {
-      try {
-        tunnel.addShip(generateShip());
-      } catch (PierNotFoundException e) {
-        throw new PierNotFoundException("Error creating Ship");
-      }
-    }
+    for (int x = 0; x < type.getCount(); x++)
+      tunnel.addShip(generateShip());
   }
 
   public static void create(Tunnel tunnel, Type type,

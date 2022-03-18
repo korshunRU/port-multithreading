@@ -10,6 +10,13 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
+/**
+ * This class simulates the tunnel work.
+ *
+ * After generating a new ship by {@link ru.korshun.port.environment.ShipGenerator} class this
+ * ship gets here. If the tunnel has free space the ship goes to tunnel, if not the ship goes
+ * to the buffer and waits for the free space in th tunnel.
+ */
 @SuppressWarnings("FieldCanBeLocal")
 public class Tunnel {
 

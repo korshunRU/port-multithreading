@@ -6,6 +6,13 @@ import ru.korshun.port.environment.options.Type;
 import java.util.List;
 import java.util.concurrent.*;
 
+/**
+ * This class simulates work of pier.
+ *
+ * After receiving the ship, unloading begins (by unloadShip method). When
+ * unloading is finished, the pier notified the {@link ru.korshun.port.environment.Port}
+ * about this.
+ */
 @SuppressWarnings("FieldCanBeLocal")
 public class Pier {
 
